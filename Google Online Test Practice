@@ -1,0 +1,85 @@
+//1. That is Perfection
+/* Write a program to determine whether a number is equal
+to the sum of its proper positive divisors(excluding the number itself).
+input format 
+1) first line T (number of test cases)
+For each test case
+2) first line N (numbers) 
+out put Format
+Print YES, if N is equal to the sum of its proper positive divisors else print NO.
+constraints 
+1<=T<=100
+1<=N<=10^9
+*/
+
+#include <iostream>
+using namespace std;
+void sol()
+{
+	int n,i,m=0,sum=0;
+	cin >> n;
+  
+	for(i=1;i<n;i++)
+	{ if(n%i==0)
+	{
+		sum=sum+i;
+	}
+	}
+   if(sum==n)
+	cout<<"YES \n";
+	else
+	cout<<"NO \n";
+}
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{sol();}
+return 0;
+}
+//2. Pythagorean primes
+/* Pytha gorean prime are number that are prime and form(4n+1).
+you are given a number N;
+Task 
+check whether the given number is a Pythagorean Prime or not.
+ Input Format
+ 1) first line T (number of test cases)
+For each test case
+2) first line N (numbers) 
+out put Format
+Print YES, if N is equal to the sum of its proper positive divisors else print NO.
+constraints 
+1<=T<=100000
+1<=N<=100000
+*/
+
+
+#include <iostream>
+using namespace std;
+void sol()
+{
+	int n,i,m=0,flag=0;
+	cin >> n;
+    m=n/2;
+	for(i=2;i<=m;i++)
+	{ if(n%i==0)
+	{
+		flag=1;
+		break;
+	}
+	}
+   if(flag==0 && (n-1)%4==0)
+	cout<<"YES \n";
+	else
+	cout<<"NO \n";
+}
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{sol();}
+return 0;
+}
+
